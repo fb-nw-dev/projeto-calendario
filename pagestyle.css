@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family:  Arial, Helvetica, sans-serif;
+  background-image: url('https://wallup.net/wp-content/uploads/2019/09/11451-outer-space-earth.jpg');
+  background-size: cover;
+  /* Para garantir que a imagem cubra toda a página */
+  background-position: center;
+  /* Para centralizar a imagem */
+  background-repeat: no-repeat;
+  /* Evita a repetição da imagem */
+  height: 100vh;
+  /* Define a altura do body como 100% da altura da janela do navegador */
+  user-select: none;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Estilos para telas menores que 600px de largura */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Estilos para telas entre 601px e 1024px de largura */
+}
+
+@media only screen and (min-width: 1025px) {
+  /* Estilos para telas maiores que 1025px de largura */
+}
+
+.calendar {
+  width: 100%;
+  color: #f7f2f2;
+  text-align: center;
+}
+
+h2 {
+  margin-left: 90px;
+  margin-right: 90px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.month {
+  margin-bottom: 20px;
+}
+
+.month h3 {
+  background-color: transparent;
+  color: #f7f2f2;
+  padding: 10px;
+  margin: 0;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.day {
+  text-align: center;
+  padding: 30px;
+  /* Aumenta o espaçamento ao redor dos números */
+  cursor: pointer;
+  position: relative;
+  color: rgba(247, 242, 242, 0.7); /* Define a cor dos números como transparente mas fosca */
+  background-color: rgba(122, 120, 120, 0.274); /* Adiciona um fundo fosco aos números */
+}
+
+.day::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.day:hover::after {
+  background-color: rgba(247, 242, 242, 0.7);
+}
+
+.navigation {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.navigation button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: transparent;
+  color: #f7f2f2;
+  border: none;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.3s;
+}
+
+.navigation button:hover {
+  border-bottom-color: #f7f2f2;
+}
+
+.sidebar {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background-color: #010b46;
+  transition: left 0.3s ease;
+  padding-top: 80px;
+}
+
+.sidebar.show {
+  left: 0;
+}
+
+#sidebar ul {
+  list-style-type: none;
+ 
+}
+
+#sidebar ul li {
+  margin-bottom: 10px;
+}
+
+#sidebar ul li a {
+  
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;}
+
+#menu-toggle {
+  font-size: 20px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: 20px;
+  padding: 0;
+  width: 30px;
+  height: 40px;
+  color: #f7f2f2;
+}
+#menu-toggle.ativar .linhas:nth-child(1){
+  transform: translateY(9px) rotate(-45deg);
+}
+#menu-toggle.ativar .linhas:nth-child(3){
+  transform: translateY(-9px) rotate(45deg);
+}
+#menu-toggle.ativar .linhas:nth-child(2){
+width: 0;
+}
+.linhas{
+  background-color: #f7f2f2;
+  width: 35px;
+  height: 1px;
+  display: block;
+  margin: 8px auto;
+  position: relative;
+  transform-origin: center;
+  transition: 0.3s;
+}
+
+h2 {
+  position: relative;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+  display: inline-block;
+}
+
+h2::before,
+h2::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+}
+
+h2::before {
+  border-right-color: #333; /* Cor da seta */
+  border-left: none;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+}
+
+h2::after {
+  border-left-color: #333; /* Cor da seta */
+  border-right: none;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+}
+
+
+
+
+
